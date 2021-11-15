@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,0FAAI;ADCZ,AAAA,QAAQ,CAAC;EACL,UAAU,ECSN,KAAgB;CDRvB",
+    "sources": [
+        "CTA.module.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "CTA.module.css"
+}

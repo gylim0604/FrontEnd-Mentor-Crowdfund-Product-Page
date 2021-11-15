@@ -1,0 +1,24 @@
+.background {
+    background: url('/images/image-hero-desktop.jpg') no-repeat center;
+    background-size: cover;
+    height: 400px;
+}
+
+.navbar {
+    padding-top: 5em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 80vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    li > a {
+        text-decoration: none;
+        color: white;
+    }
+    gap: 1em;
+}
