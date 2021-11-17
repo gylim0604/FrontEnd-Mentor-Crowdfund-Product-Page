@@ -11,6 +11,9 @@ $black: hsl(0, 0%, 0%);
 $dark-gray: hsl(0, 0%, 48%);
 $white: hsl(0, 0%, 100%);
 
+// bookmark colors
+$light-gray: hsl(0, 0%, 90%);
+// bg
 $bg-white: hsl(0, 0%, 95%);
 // Typography
 $font-size: 16px;
@@ -18,3 +21,6 @@ $font-size: 16px;
 $weight-light: 400;
 $weight-normal: 500;
 $weight-bold: 700;
+
+$screen-large: 80vw;
+$screen-large-max: 1200px;

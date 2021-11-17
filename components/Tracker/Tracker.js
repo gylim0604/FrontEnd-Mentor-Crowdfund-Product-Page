@@ -1,8 +1,13 @@
 import React from 'react';
+import Card from './Card';
 
 const Tracker = () => {
     return (
-        <div> $89,914 of $100,000 backed 5,007 total backers 56 days left</div>
+        <div className='container'>
+            <Card amount='$89,914 ' description='of $100,000 backed' />
+            <Card amount='5,007 ' description='total backers' />
+            <Card amount=' 56' description='days left' />
+        </div>
     );
 };
 

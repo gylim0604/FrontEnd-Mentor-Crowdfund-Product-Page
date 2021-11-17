@@ -1,8 +1,18 @@
 @import 'variables';
 
-html {
+html,
+body {
     font-family: 'Commissioner', sans-serif;
     font-weight: $weight-normal;
     font-size: $font-size;
     background: $bg-white;
+}
+
+.container {
+    background: $white;
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 10px;
+    width: 55vw;
+    max-width: 900px;
 }

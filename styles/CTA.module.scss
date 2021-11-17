@@ -1,4 +1,51 @@
 @import 'variables';
 .wrapper {
     background: $white;
+    margin: 0 auto;
+    padding: 3em;
+    border-radius: 10px;
+    position: relative;
+    top: -4em;
+    bottom: -4em;
+}
+.logo {
+    position: absolute;
+    top: -28px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.info {
+    text-align: center;
+    h1 {
+        font-weight: $weight-bold;
+        margin: 0.75em;
+        font-size: 1.8em;
+    }
+    p {
+        color: $dark-gray;
+        font-size: 1em;
+    }
+}
+
+.action_bar {
+    margin-top: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bookmark {
+    background: $light-gray;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-right: 2em;
+    border-radius: 40px;
+    a {
+        color: $dark-gray;
+        font-weight: $weight-bold;
+        text-decoration: none;
+    }
 }

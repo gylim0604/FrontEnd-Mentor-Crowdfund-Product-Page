@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,0FAAI;ADEZ,AAAA,KAAK,CAAC;EACF,OAAO,EAAE,YAAY;EACrB,KAAK,ECOD,KAAgB;EDNpB,OAAO,EAAE,YAAY;EACrB,aAAa,EAAE,IAAI;EACnB,WAAW,ECeD,GAAG;EDdb,eAAe,EAAE,IAAI;EACrB,UAAU,ECJE,OAAkB;CDKjC",
+    "sources": [
+        "Link.module.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "Link.module.css"
+}
