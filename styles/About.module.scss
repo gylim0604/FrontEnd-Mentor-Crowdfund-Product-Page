@@ -1,0 +1,56 @@
+@import 'variables';
+
+.About {
+    display: block;
+    margin-bottom: 2em;
+    h2 {
+        font-weight: $weight-bold;
+        margin-bottom: 2em;
+    }
+    p {
+        color: $dark-gray;
+        font-weight: $weight-normal;
+        line-height: 2.25em;
+    }
+}
+
+.Card {
+    color: $dark-gray;
+    padding: 2em;
+    border: 2px solid $light-gray;
+    border-radius: 10px;
+    margin: 1.5em 0;
+    p {
+        color: $dark-gray;
+        font-weight: $weight-light;
+        line-height: 2.25em;
+    }
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+        font-weight: $weight-bold;
+        color: $black;
+        font-size: 1.25em;
+    }
+    p {
+        color: $moderate-cyan;
+        font-weight: $weight-normal;
+    }
+}
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+        color: black;
+        font-weight: $weight-bold;
+        font-size: 2.25em;
+        small {
+            font-weight: initial;
+            font-size: initial;
+        }
+    }
+}
