@@ -9,6 +9,10 @@
   z-index: 1;
 }
 
+.modalClose {
+  float: right;
+}
+
 .CTA {
   display: block;
   margin-bottom: 3em;
@@ -30,14 +34,70 @@
   margin: 1em 0;
   border: 2px solid #e6e6e6;
   border-radius: 5px;
+}
+
+.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.disabled {
+  opacity: 0.6;
+}
+
 .Checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
   display: block;
+  margin: 0;
+  font: inherit;
+  width: 3em;
+  height: 2em;
+  border: 0.15em solid #e6e6e6;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.Checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  margin: 0;
   margin-right: 2em;
+  font: inherit;
+  width: 3em;
+  height: 2em;
+  border: 2px solid #e6e6e6;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.Checkbox::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 120ms -webkit-transform ease-in-out;
+  transition: 120ms -webkit-transform ease-in-out;
+  transition: 120ms transform ease-in-out;
+  transition: 120ms transform ease-in-out, 120ms -webkit-transform ease-in-out;
+  -webkit-box-shadow: inset 1em 1em #3cb4ac;
+          box-shadow: inset 1em 1em #3cb4ac;
+}
+
+.Checkbox:checked::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .CardTitle {
@@ -72,5 +132,59 @@
 .description {
   color: #7a7a7a;
   line-height: 2em;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 2px solid #e6e6e6;
+  padding-top: 2em;
+  margin-top: 2em;
+}
+
+.input label {
+  color: #7a7a7a;
+}
+
+.input span {
+  margin-left: auto;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  border: 2px solid #e6e6e6;
+  border-radius: 40px;
+  margin-right: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 120px;
+  padding: 0 1.5em;
+  gap: 0.75em;
+}
+
+.input span p {
+  color: #7a7a7a;
+  font-weight: 700;
+}
+
+.input span input {
+  border: none;
+  font-size: 1em;
+  width: 80%;
+  font-weight: 700;
+}
+
+.input span input:focus {
+  outline: none;
 }
 /*# sourceMappingURL=SelectionModal.module.css.map */

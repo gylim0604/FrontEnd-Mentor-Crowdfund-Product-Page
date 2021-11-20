@@ -5,8 +5,10 @@ import CTA from '../components/CTA/CTA';
 import Tracker from '../components/Tracker/Tracker';
 import About from '../components/About/About';
 import SelectionModal from '../components/SelectionModal/SelectionModal';
+import { useState } from 'react';
 
 export default function Home() {
+    const [modal, setModal] = useState(true);
     return (
         <div className='overlay'>
             <Head>
@@ -26,7 +28,7 @@ export default function Home() {
             <CTA />
             <Tracker />
             <About />
-            <SelectionModal />
+            <SelectionModal active={modal} onClick={() => setModal(!modal)} />
         </div>
     );
 }
