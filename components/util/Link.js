@@ -1,8 +1,12 @@
 import React from 'react';
 import styles from '../../styles/Link.module.css';
-const Link = ({ url, text }) => {
+const Link = ({ url, text, disable }) => {
     return (
-        <a className={styles.link} href={url}>
+        <a
+            className={`${styles.link} ${disable ? styles.disable : ''}`}
+            href={url}
+            disabled
+        >
             {text}
         </a>
     );

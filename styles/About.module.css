@@ -29,6 +29,10 @@
   line-height: 2.25em;
 }
 
+.disable {
+  opacity: 0.6;
+}
+
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,6 +69,13 @@
 }
 
 .action p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25em;
   color: black;
   font-weight: 700;
   font-size: 2.25em;
@@ -73,5 +84,6 @@
 .action p small {
   font-weight: initial;
   font-size: initial;
+  color: #7a7a7a;
 }
 /*# sourceMappingURL=About.module.css.map */

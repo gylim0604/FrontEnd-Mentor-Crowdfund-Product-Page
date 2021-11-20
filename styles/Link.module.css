@@ -8,4 +8,13 @@
   text-decoration: none;
   background: #3cb4ac;
 }
+
+.link:hover {
+  background: #147b74;
+  cursor: pointer;
+}
+
+.disable {
+  background: #7a7a7a;
+}
 /*# sourceMappingURL=Link.module.css.map */
