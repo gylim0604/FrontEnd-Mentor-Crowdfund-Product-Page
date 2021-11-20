@@ -15,4 +15,14 @@ body {
   width: 55vw;
   max-width: 900px;
 }
+
+.overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #7a7a7a;
+  opacity: 0.5;
+}
 /*# sourceMappingURL=globals.css.map */

@@ -34,14 +34,24 @@
 
 .bookmark {
     background: $light-gray;
-    display: flex;
-    align-items: center;
-    gap: 1em;
+
     padding-right: 2em;
     border-radius: 40px;
     a {
+        display: flex;
+        align-items: center;
+        gap: 1em;
         color: $dark-gray;
         font-weight: $weight-bold;
         text-decoration: none;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+.active {
+    background: lighten($moderate-cyan, 47%);
+    a {
+        color: $dark-cyan;
     }
 }

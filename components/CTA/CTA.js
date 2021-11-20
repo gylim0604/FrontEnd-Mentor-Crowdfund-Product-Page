@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BookmarkIcon, MastercraftLogo } from '../../assets/Icon';
 import styles from '../../styles/CTA.module.css';
 import Link from '../util/Link';
 
 function CTA() {
+    const [active, setActive] = useState(false);
     return (
         <div className={styles.wrapper + ' container'}>
             <img
@@ -20,9 +21,15 @@ function CTA() {
             </span>
             <span className={styles.action_bar}>
                 <Link url='#' text='Back this project' />
-                <span className={styles.bookmark}>
-                    <BookmarkIcon />
-                    <a href=''>Bookmark</a>
+                <span
+                    className={`${styles.bookmark} ${
+                        active ? styles.active : ''
+                    }`}
+                >
+                    <a href='#' onClick={() => setActive(!active)}>
+                        <BookmarkIcon active={active} />
+                        Bookmark
+                    </a>
                 </span>
             </span>
         </div>

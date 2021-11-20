@@ -4,10 +4,11 @@ import Header from '../components/Header/Header';
 import CTA from '../components/CTA/CTA';
 import Tracker from '../components/Tracker/Tracker';
 import About from '../components/About/About';
+import SelectionModal from '../components/SelectionModal/SelectionModal';
 
 export default function Home() {
     return (
-        <div>
+        <div className='overlay'>
             <Head>
                 <title>Frontend Mentor | Crowdfunding product page</title>
                 <meta
@@ -25,6 +26,7 @@ export default function Home() {
             <CTA />
             <Tracker />
             <About />
+            <SelectionModal />
         </div>
     );
 }

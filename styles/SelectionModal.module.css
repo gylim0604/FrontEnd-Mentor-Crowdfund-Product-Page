@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+.modal {
+  position: absolute;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.CTA {
+  display: block;
+  margin-bottom: 3em;
+}
+
+.CTA h3 {
+  font-weight: 700;
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+}
+
+.CTA p {
+  color: #7a7a7a;
+  font-weight: 500;
+}
+
+.Card {
+  padding: 2em;
+  margin: 1em 0;
+  border: 2px solid #e6e6e6;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Checkbox {
+  display: block;
+  margin-right: 2em;
+}
+
+.CardTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.25em;
+  gap: 1em;
+}
+
+.CardTitle h4 {
+  font-weight: 700;
+}
+
+.CardTitle p {
+  color: #3cb4ac;
+  font-weight: 500;
+}
+
+.CardTitle .stock {
+  margin-left: auto;
+  color: black;
+  font-weight: 700;
+}
+
+.CardTitle .stock span {
+  margin-left: 0.5em;
+  font-weight: 400;
+  color: #7a7a7a;
+}
+
+.description {
+  color: #7a7a7a;
+  line-height: 2em;
+}
+/*# sourceMappingURL=SelectionModal.module.css.map */

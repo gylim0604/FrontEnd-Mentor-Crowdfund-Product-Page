@@ -1,0 +1,67 @@
+@import 'variables';
+
+.modal {
+    position: absolute;
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.CTA {
+    display: block;
+    margin-bottom: 3em;
+    h3 {
+        font-weight: $weight-bold;
+        font-size: 1.75em;
+        margin-bottom: 0.5em;
+    }
+    p {
+        color: $dark-gray;
+        font-weight: $weight-normal;
+    }
+}
+
+.Card {
+    padding: 2em;
+    margin: 1em 0;
+    border: 2px solid $light-gray;
+    border-radius: 5px;
+    display: flex;
+}
+
+.Checkbox {
+    display: block;
+    margin-right: 2em;
+}
+
+.CardTitle {
+    display: flex;
+    margin-bottom: 1.25em;
+    gap: 1em;
+    h4 {
+        font-weight: $weight-bold;
+    }
+    p {
+        color: $moderate-cyan;
+        font-weight: $weight-normal;
+    }
+    .stock {
+        margin-left: auto;
+        color: $black;
+        font-weight: $weight-bold;
+
+        span {
+            margin-left: 0.5em;
+            font-weight: $weight-light;
+            color: $dark-gray;
+        }
+    }
+}
+
+.description {
+    color: $dark-gray;
+    line-height: 2em;
+}

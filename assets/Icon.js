@@ -1,9 +1,16 @@
-export const BookmarkIcon = ({ fill = '#B1B1B1', bg = '#2F2F2F' }) => {
+export const BookmarkIcon = ({ active }) => {
+    let bg = '#2F2F2F';
+    let bg_active = 'hsl(176, 72%, 28%)';
+    let fill = '#B1B1B1';
+    let fill_active = '#fff';
     return (
         <svg width='56' height='56' xmlns='http://www.w3.org/2000/svg'>
             <g fill='none' fillRule='evenodd'>
-                <circle fill={bg} cx='28' cy='28' r='28' />
-                <path fill={fill} d='M23 19v18l5-5.058L33 37V19z' />
+                <circle fill={active ? bg_active : bg} cx='28' cy='28' r='28' />
+                <path
+                    fill={active ? fill_active : fill}
+                    d='M23 19v18l5-5.058L33 37V19z'
+                />
             </g>
         </svg>
     );

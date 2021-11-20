@@ -44,6 +44,11 @@
 
 .bookmark {
   background: #e6e6e6;
+  padding-right: 2em;
+  border-radius: 40px;
+}
+
+.bookmark a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,13 +56,20 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 1em;
-  padding-right: 2em;
-  border-radius: 40px;
-}
-
-.bookmark a {
   color: #7a7a7a;
   font-weight: 700;
   text-decoration: none;
+}
+
+.bookmark a:hover {
+  opacity: 0.8;
+}
+
+.active {
+  background: #e8f7f6;
+}
+
+.active a {
+  color: #147b74;
 }
 /*# sourceMappingURL=CTA.module.css.map */
