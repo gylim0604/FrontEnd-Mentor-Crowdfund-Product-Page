@@ -1,22 +1,38 @@
-import React from 'react';
-import styles from '../../styles/SelectionModal.module.css';
-import Link from '../util/Link';
-const PledgeCard = ({ title, description, price, stock, active, disable }) => {
+import React, { useState } from 'react';
+import styles from '../../../styles/SelectionModal.module.css';
+import { useAppContext } from '../../../util/ModalContext';
+import Link from '../../util/Link';
+const PledgeCard = ({
+    title,
+    description,
+    price,
+    stock,
+    active,
+    disable,
+    onClick,
+}) => {
+    let { state, handleChange } = useAppContext();
+    let { completion, selection } = state;
+    const [amount, setAmount] = useState(0);
     return (
-        <div className={`${styles.Card} ${disable ? styles.disabled : ''}`}>
+        <div
+            className={`${styles.Card} ${disable ? styles.disabled : ''} ${
+                active ? styles.selected : ''
+            }`}
+        >
             <div className={styles.info}>
                 <input
                     className={styles.Checkbox}
                     type='checkbox'
-                    defaultChecked={active}
                     disabled={disable}
+                    onClick={onClick}
+                    checked={active}
                 />
                 <div>
                     <span className={styles.CardTitle}>
-                        {/* <span> */}
                         <h4>{title}</h4>
-                        <p>{price ? `Pledge ${price} or more ` : ''}</p>
-                        {/* </span> */}
+                        <p>{price ? `Pledge $ ${price} or more ` : ''}</p>
+
                         <p className={styles.stock}>
                             {stock}
                             <span>{stock ? 'left' : ''}</span>
@@ -33,10 +49,20 @@ const PledgeCard = ({ title, description, price, stock, active, disable }) => {
                         type='text'
                         name='amount'
                         defaultValue={price}
+                        min={price}
                         disabled={disable}
                     />
                 </span>
-                <Link text='Continue' />
+                <Link
+                    text='Continue'
+                    onClick={() => {
+                        handleChange({
+                            ...state,
+                            completion: !completion,
+                            selection: !selection,
+                        });
+                    }}
+                />
             </div>
         </div>
     );

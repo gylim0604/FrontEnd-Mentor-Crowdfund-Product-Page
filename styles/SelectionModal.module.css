@@ -13,6 +13,10 @@
   float: right;
 }
 
+.modalClose:hover {
+  cursor: pointer;
+}
+
 .CTA {
   display: block;
   margin-bottom: 3em;
@@ -44,6 +48,10 @@
 
 .disabled {
   opacity: 0.6;
+}
+
+.selected {
+  border-color: #3cb4ac;
 }
 
 .Checkbox {
@@ -112,6 +120,11 @@
   font-weight: 700;
 }
 
+.CardTitle h4:hover {
+  cursor: pointer;
+  color: #3cb4ac;
+}
+
 .CardTitle p {
   color: #3cb4ac;
   font-weight: 500;
@@ -170,6 +183,11 @@
   width: 120px;
   padding: 0 1.5em;
   gap: 0.75em;
+}
+
+.input span:hover {
+  border-color: #3cb4ac;
+  cursor: pointer;
 }
 
 .input span p {

@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+.wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 70%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.wrapper h4 {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+
+.wrapper p {
+  text-align: center;
+  color: #7a7a7a;
+  font-weight: 500;
+  line-height: 2em;
+  margin: 2em 0;
+}
+/*# sourceMappingURL=CompletionModal.module.css.map */

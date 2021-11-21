@@ -1,7 +1,7 @@
 import React from 'react';
 import Option from './Option';
 import styles from '../../styles/About.module.css';
-function About() {
+function About({ onClick }) {
     return (
         <div className={' container'} style={{ marginTop: '4em' }}>
             <span className={styles.About}>
@@ -23,12 +23,14 @@ function About() {
                 description="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
                 amount='25'
                 stock='101'
+                onClick={onClick}
             />
             <Option
                 title='Black Edition Stand'
                 description='You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.'
                 amount='75'
                 stock='64'
+                onClick={onClick}
             />
             <Option
                 title='Mahogany Special Edition'

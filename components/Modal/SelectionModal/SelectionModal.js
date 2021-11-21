@@ -1,14 +1,23 @@
-import React from 'react';
-import styles from '../../styles/SelectionModal.module.css';
+import React, { useState } from 'react';
+import styles from '../../../styles/SelectionModal.module.css';
 import PledgeCard from './PledgeCard';
-import { ModalClose } from '../../assets/Icon';
+import { ModalClose } from '../../../assets/Icon';
+import { useAppContext } from '../../../util/ModalContext';
 
-const SelectionModal = ({ active, onClick }) => {
+const SelectionModal = () => {
+    const [selected, setSelected] = useState(0);
+    let { state, setSelection } = useAppContext();
+    let { selection } = state;
     return (
         <div
-            className={styles.modal + ' container' + (active ? '' : ' hidden')}
+            className={
+                styles.modal + ' container' + (selection ? '' : ' hidden')
+            }
         >
-            <span className={styles.modalClose} onClick={onClick}>
+            <span
+                className={styles.modalClose}
+                onClick={() => setSelection(!selection)}
+            >
                 <ModalClose />
             </span>
             <span className={styles.CTA}>
@@ -21,19 +30,24 @@ const SelectionModal = ({ active, onClick }) => {
             <PledgeCard
                 title='Pledge with no reward '
                 description='Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.'
-                active={true}
+                active={selected === 0}
+                onClick={() => setSelected(0)}
             />
             <PledgeCard
                 title='Bamboo Stand'
                 description="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
                 price='25'
                 stock='101'
+                active={selected === 1}
+                onClick={() => setSelected(1)}
             />
             <PledgeCard
                 title='Black Edition Stand'
                 description='You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.'
                 price='75'
                 stock='64'
+                active={selected === 2}
+                onClick={() => setSelected(2)}
             />
             <PledgeCard
                 title='Mahogany Special Edition'
@@ -41,6 +55,8 @@ const SelectionModal = ({ active, onClick }) => {
                 price='200'
                 stock='0'
                 disable={true}
+                active={selected === 3}
+                onClick={() => setSelected(3)}
             />
         </div>
     );

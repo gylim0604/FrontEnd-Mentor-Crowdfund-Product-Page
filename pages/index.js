@@ -1,16 +1,17 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Header from '../components/Header/Header';
 import CTA from '../components/CTA/CTA';
 import Tracker from '../components/Tracker/Tracker';
 import About from '../components/About/About';
-import SelectionModal from '../components/SelectionModal/SelectionModal';
-import { useState } from 'react';
+import SelectionModal from '../components/Modal/SelectionModal/SelectionModal';
+import { useAppContext } from '../util/ModalContext';
+import CompletionModal from '../components/Modal/CompletionModal/CompletionModal';
 
 export default function Home() {
-    const [modal, setModal] = useState(true);
+    let { state, setSelection } = useAppContext();
+    let { selection, completion } = state;
     return (
-        <div className='overlay'>
+        <div className={selection || completion ? 'overlay' : ''}>
             <Head>
                 <title>Frontend Mentor | Crowdfunding product page</title>
                 <meta
@@ -28,7 +29,8 @@ export default function Home() {
             <CTA />
             <Tracker />
             <About />
-            <SelectionModal active={modal} onClick={() => setModal(!modal)} />
+            <SelectionModal />
+            <CompletionModal />
         </div>
     );
 }

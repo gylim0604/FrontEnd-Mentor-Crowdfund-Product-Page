@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { BookmarkIcon, MastercraftLogo } from '../../assets/Icon';
 import styles from '../../styles/CTA.module.css';
+import { useAppContext } from '../../util/ModalContext';
 import Link from '../util/Link';
 
 function CTA() {
+    let { state, handleChange } = useAppContext();
+    let { selection } = state;
     const [active, setActive] = useState(false);
     return (
         <div className={styles.wrapper + ' container'}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
                 className={styles.logo}
                 src='/images/logo-mastercraft.svg'
@@ -20,7 +24,12 @@ function CTA() {
                 </p>
             </span>
             <span className={styles.action_bar}>
-                <Link url='#' text='Back this project' />
+                <Link
+                    text='Back this project'
+                    onClick={() =>
+                        handleChange({ ...state, selection: !selection })
+                    }
+                />
                 <span
                     className={`${styles.bookmark} ${
                         active ? styles.active : ''
