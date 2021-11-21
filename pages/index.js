@@ -3,9 +3,8 @@ import Header from '../components/Header/Header';
 import CTA from '../components/CTA/CTA';
 import Tracker from '../components/Tracker/Tracker';
 import About from '../components/About/About';
-import SelectionModal from '../components/Modal/SelectionModal/SelectionModal';
+import Modal from '../components/Modal/Modal';
 import { useAppContext } from '../util/ModalContext';
-import CompletionModal from '../components/Modal/CompletionModal/CompletionModal';
 
 export default function Home() {
     let { state, setSelection } = useAppContext();
@@ -29,8 +28,7 @@ export default function Home() {
             <CTA />
             <Tracker />
             <About />
-            <SelectionModal />
-            <CompletionModal />
+            <Modal />
         </div>
     );
 }
