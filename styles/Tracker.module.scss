@@ -2,16 +2,19 @@
 
 .stats {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
     hr {
+        width: 30%;
         border-color: $light-gray;
-        margin-right: 3em;
+        margin: 2em 0;
     }
 }
 
 .card {
-    width: 30%;
-    text-align: left;
+    // width: 30%;
+    text-align: center;
     h3 {
         font-weight: $weight-bold;
         font-size: 2em;
@@ -44,5 +47,23 @@
     progress::-moz-progress-bar {
         background-color: $moderate-cyan;
         border-radius: 20px;
+    }
+}
+
+@media screen and (min-width: $bp-medium) {
+    .stats {
+        flex-direction: row;
+        align-items: unset;
+        justify-content: space-between;
+        hr {
+            width: unset;
+            border-color: $light-gray;
+            margin: unset;
+            margin-right: 3em;
+        }
+    }
+    .card {
+        width: 30%;
+        text-align: left;
     }
 }

@@ -9,8 +9,11 @@
     }
     p {
         color: $dark-gray;
-        font-weight: $weight-normal;
-        line-height: 2.25em;
+        font-weight: $weight-light;
+        line-height: 2em;
+    }
+    br {
+        margin-bottom: 2em;
     }
 }
 
@@ -23,7 +26,7 @@
     p {
         color: $dark-gray;
         font-weight: $weight-light;
-        line-height: 2.25em;
+        line-height: 2em;
     }
 }
 
@@ -32,12 +35,12 @@
 }
 .title {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 2em;
     h4 {
         font-weight: $weight-bold;
         color: $black;
-        font-size: 1.25em;
+        font-size: 1em;
     }
     p {
         color: $moderate-cyan;
@@ -46,7 +49,8 @@
 }
 .action {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     p {
         display: flex;
@@ -59,6 +63,52 @@
             font-weight: initial;
             font-size: initial;
             color: $dark-gray;
+        }
+    }
+}
+
+@media screen and (min-width: $bp-medium) {
+    .About {
+        p {
+            font-weight: $weight-normal;
+            line-height: 2.25em;
+        }
+        br {
+            margin-bottom: unset;
+        }
+    }
+    .Card {
+        p {
+            line-height: 2.25em;
+        }
+    }
+
+    .title {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: unset;
+        justify-content: space-between;
+        h4 {
+            font-size: 1.25em;
+        }
+    }
+    .action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            display: flex;
+            align-items: center;
+            gap: 0.25em;
+            color: black;
+            font-weight: $weight-bold;
+            font-size: 2.25em;
+            small {
+                font-weight: initial;
+                font-size: initial;
+                color: $dark-gray;
+            }
         }
     }
 }

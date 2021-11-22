@@ -11,8 +11,12 @@
 
 .About p {
   color: #7a7a7a;
-  font-weight: 500;
-  line-height: 2.25em;
+  font-weight: 400;
+  line-height: 2em;
+}
+
+.About br {
+  margin-bottom: 2em;
 }
 
 .Card {
@@ -26,7 +30,7 @@
 .Card p {
   color: #7a7a7a;
   font-weight: 400;
-  line-height: 2.25em;
+  line-height: 2em;
 }
 
 .disable {
@@ -37,18 +41,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2em;
 }
 
 .title h4 {
   font-weight: 700;
   color: black;
-  font-size: 1.25em;
+  font-size: 1em;
 }
 
 .title p {
@@ -60,9 +63,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -85,5 +92,66 @@
   font-weight: initial;
   font-size: initial;
   color: #7a7a7a;
+}
+
+@media screen and (min-width: 750px) {
+  .About p {
+    font-weight: 500;
+    line-height: 2.25em;
+  }
+  .About br {
+    margin-bottom: unset;
+  }
+  .Card p {
+    line-height: 2.25em;
+  }
+  .title {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: unset;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .title h4 {
+    font-size: 1.25em;
+  }
+  .action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .action p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.25em;
+    color: black;
+    font-weight: 700;
+    font-size: 2.25em;
+  }
+  .action p small {
+    font-weight: initial;
+    font-size: initial;
+    color: #7a7a7a;
+  }
 }
 /*# sourceMappingURL=About.module.css.map */

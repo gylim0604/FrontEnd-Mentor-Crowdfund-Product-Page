@@ -3,19 +3,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .stats hr {
+  width: 30%;
   border-color: #e6e6e6;
-  margin-right: 3em;
+  margin: 2em 0;
 }
 
 .card {
-  width: 30%;
-  text-align: left;
+  text-align: center;
 }
 
 .card h3 {
@@ -54,5 +58,30 @@
 .progressBar progress::-moz-progress-bar {
   background-color: #3cb4ac;
   border-radius: 20px;
+}
+
+@media screen and (min-width: 750px) {
+  .stats {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .stats hr {
+    width: unset;
+    border-color: #e6e6e6;
+    margin: unset;
+    margin-right: 3em;
+  }
+  .card {
+    width: 30%;
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=Tracker.module.css.map */

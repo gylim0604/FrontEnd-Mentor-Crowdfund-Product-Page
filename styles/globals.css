@@ -10,10 +10,10 @@ body {
 .container {
   background: white;
   margin: 0 auto;
-  padding: 3em;
+  padding: 2em 1.4em;
   border-radius: 10px;
-  width: 55vw;
-  max-width: 900px;
+  width: 90vw;
+  max-width: 400px;
 }
 
 .overlay::after {
@@ -28,5 +28,13 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+@media screen and (min-width: 750px) {
+  .container {
+    padding: 3em;
+    width: 55vw;
+    max-width: 900px;
+  }
 }
 /*# sourceMappingURL=globals.css.map */

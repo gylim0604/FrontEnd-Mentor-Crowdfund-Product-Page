@@ -35,9 +35,9 @@ function CTA() {
                         active ? styles.active : ''
                     }`}
                 >
-                    <a href='#' onClick={() => setActive(!active)}>
+                    <a as href='#/' onClick={() => setActive(!active)}>
                         <BookmarkIcon active={active} />
-                        Bookmark
+                        <p>Bookmark</p>
                     </a>
                 </span>
             </span>
