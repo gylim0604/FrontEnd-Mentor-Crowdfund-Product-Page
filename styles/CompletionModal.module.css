@@ -2,12 +2,13 @@
 .wrapper {
   position: absolute;
   z-index: 1;
-  top: 70%;
+  top: 20%;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: 90vw;
+  max-width: 400px;
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,8 +33,18 @@
 .wrapper p {
   text-align: center;
   color: #7a7a7a;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 2em;
   margin: 2em 0;
+}
+
+@media screen and (min-width: 750px) {
+  .wrapper {
+    top: 70%;
+    width: 500px;
+  }
+  .wrapper p {
+    font-weight: 500;
+  }
 }
 /*# sourceMappingURL=CompletionModal.module.css.map */
