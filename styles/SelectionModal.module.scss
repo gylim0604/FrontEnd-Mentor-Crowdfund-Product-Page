@@ -2,7 +2,7 @@
 
 .modal {
     position: absolute;
-    top: 50%;
+    top: 0%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -33,10 +33,13 @@
 }
 
 .Card {
-    padding: 2em;
+    padding: 1.5em;
     margin: 1em 0;
     border: 2px solid $light-gray;
     border-radius: 5px;
+    display: grid;
+    grid-template-rows: 10% 50% 10% 30%;
+    grid-template-columns: 20% 80%;
 }
 
 .info {
@@ -57,25 +60,11 @@
     display: block;
     margin: 0;
     font: inherit;
-    width: 3em;
-    height: 2em;
-    border: 0.15em solid $light-gray;
-    border-radius: 50%;
-    display: grid;
-    place-content: center;
-}
-
-.Checkbox {
-    appearance: none;
-    background-color: #fff;
-    // display: block;
-    margin: 0;
-    margin-right: 2em;
-    font: inherit;
-    width: 3em;
+    width: 2em;
     height: 2em;
     border: 2px solid $light-gray;
     border-radius: 50%;
+    justify-self: flex-start;
     display: grid;
     place-content: center;
 }
@@ -96,8 +85,9 @@
 
 .CardTitle {
     display: flex;
-    margin-bottom: 1.25em;
-    gap: 1em;
+    flex-direction: column;
+    margin-bottom: 1em;
+    gap: 0.5em;
     h4 {
         font-weight: $weight-bold;
         &:hover {
@@ -109,31 +99,38 @@
         color: $moderate-cyan;
         font-weight: $weight-normal;
     }
-    .stock {
-        margin-left: auto;
-        color: $black;
-        font-weight: $weight-bold;
-
-        span {
-            margin-left: 0.5em;
-            font-weight: $weight-light;
-            color: $dark-gray;
-        }
+}
+.stock {
+    grid-row: 3/4;
+    grid-column: 1/3;
+    color: $black;
+    font-weight: $weight-bold;
+    font-size: 1.5em;
+    span {
+        font-size: 1rem;
+        margin-left: 0.5em;
+        font-weight: $weight-light;
+        color: $dark-gray;
     }
 }
-
 .description {
+    grid-column: 1/3;
     color: $dark-gray;
     line-height: 2em;
+    margin: 1em 0;
 }
-
 .input {
-    display: flex;
-    align-items: center;
+    grid-column: 1/3;
+    display: grid;
     border-top: 2px solid $light-gray;
     padding-top: 2em;
     margin-top: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0 1em;
     label {
+        justify-self: center;
+        grid-column: 1/3;
         color: $dark-gray;
     }
     span {
@@ -141,13 +138,11 @@
         align-self: stretch;
         border: 2px solid $light-gray;
         border-radius: 40px;
-        margin-right: 2em;
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 120px;
         padding: 0 1.5em;
-        gap: 0.75em;
+
         &:hover {
             border-color: $moderate-cyan;
             cursor: pointer;
@@ -155,6 +150,7 @@
         p {
             color: $dark-gray;
             font-weight: $weight-bold;
+            margin-right: 10px;
         }
         input {
             border: none;

@@ -20,31 +20,30 @@ const PledgeCard = ({
                 active ? styles.selected : ''
             }`}
         >
-            <div className={styles.info}>
-                <input
-                    className={styles.Checkbox}
-                    type='checkbox'
-                    disabled={disable}
-                    onClick={onClick}
-                    checked={active}
-                />
-                <div>
-                    <span className={styles.CardTitle}>
-                        <h4>{title}</h4>
-                        <p>{price ? `Pledge $ ${price} or more ` : ''}</p>
+            <input
+                className={styles.Checkbox}
+                type='checkbox'
+                disabled={disable}
+                onClick={onClick}
+                checked={active}
+            />
+            <span className={styles.CardTitle}>
+                <h4>{title}</h4>
+                <p>{price ? `Pledge $ ${price} or more ` : ''}</p>
+            </span>
+            {stock ? (
+                <p className={styles.stock}>
+                    {stock} <span>left</span>
+                </p>
+            ) : (
+                ''
+            )}
 
-                        <p className={styles.stock}>
-                            {stock}
-                            <span>{stock ? 'left' : ''}</span>
-                        </p>
-                    </span>
-                    <p className={styles.description}>{description}</p>
-                </div>
-            </div>
+            <p className={styles.description}>{description}</p>
             <div className={`${styles.input} ${active ? '' : ' hidden'}`}>
                 <label htmlFor='amount'>Enter your pledge </label>
                 <span>
-                    <p>$</p>{' '}
+                    <p>$</p>
                     <input
                         type='text'
                         name='amount'
