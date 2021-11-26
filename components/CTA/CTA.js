@@ -26,9 +26,15 @@ function CTA() {
             <span className={styles.action_bar}>
                 <Link
                     text='Back this project'
-                    onClick={() =>
-                        handleChange({ ...state, selection: !selection })
-                    }
+                    onClick={() => {
+                        handleChange({
+                            ...state,
+                            selection: !selection,
+                            selected: 0,
+                        });
+                        let test = document.getElementById('selectionModal');
+                        test.scrollTop;
+                    }}
                 />
                 <span
                     className={`${styles.bookmark} ${

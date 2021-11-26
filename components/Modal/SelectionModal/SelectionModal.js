@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../../../styles/SelectionModal.module.css';
 import PledgeCard from './PledgeCard';
 import { ModalClose } from '../../../assets/Icon';
 import { useAppContext } from '../../../util/ModalContext';
 
 const SelectionModal = () => {
-    const [selected, setSelected] = useState(0);
-    let { state, setSelection } = useAppContext();
-    let { selection } = state;
+    let { state, handleChange } = useAppContext();
+    let { selection, selected } = state;
     return (
         <div
+            tabIndex='0'
+            id='selectionModal'
             className={
                 styles.modal + ' container' + (selection ? '' : ' hidden')
             }
         >
             <span
                 className={styles.modalClose}
-                onClick={() => setSelection(!selection)}
+                onClick={() =>
+                    handleChange({ ...state, selection: !selection })
+                }
             >
                 <ModalClose />
             </span>
@@ -31,7 +34,7 @@ const SelectionModal = () => {
                 title='Pledge with no reward '
                 description='Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.'
                 active={selected === 0}
-                onClick={() => setSelected(0)}
+                onClick={() => handleChange({ ...state, selected: 0 })}
             />
             <PledgeCard
                 title='Bamboo Stand'
@@ -39,7 +42,7 @@ const SelectionModal = () => {
                 price='25'
                 stock='101'
                 active={selected === 1}
-                onClick={() => setSelected(1)}
+                onClick={() => handleChange({ ...state, selected: 1 })}
             />
             <PledgeCard
                 title='Black Edition Stand'
@@ -47,7 +50,7 @@ const SelectionModal = () => {
                 price='75'
                 stock='64'
                 active={selected === 2}
-                onClick={() => setSelected(2)}
+                onClick={() => handleChange({ ...state, selected: 2 })}
             />
             <PledgeCard
                 title='Mahogany Special Edition'
@@ -56,7 +59,7 @@ const SelectionModal = () => {
                 stock='0'
                 disable={true}
                 active={selected === 3}
-                onClick={() => setSelected(3)}
+                onClick={() => handleChange({ ...state, selected: 3 })}
             />
         </div>
     );

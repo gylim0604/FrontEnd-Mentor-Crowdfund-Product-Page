@@ -66,7 +66,6 @@
 
 .bookmark p {
   display: none;
-  font-weight: 700;
 }
 
 .active {
@@ -88,6 +87,10 @@
   .bookmark {
     background: #e6e6e6;
     padding-right: 2em;
+  }
+  .bookmark p {
+    display: initial;
+    font-weight: 700;
   }
 }
 /*# sourceMappingURL=CTA.module.css.map */

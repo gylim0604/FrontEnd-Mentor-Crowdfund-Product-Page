@@ -220,6 +220,9 @@
 }
 
 @media screen and (min-width: 750px) {
+  .modal {
+    top: 100%;
+  }
   .CTA {
     display: block;
     margin-bottom: 3em;
@@ -233,10 +236,66 @@
     color: #7a7a7a;
     font-weight: 500;
   }
+  .Card {
+    -ms-grid-columns: 10% 80% 10%;
+        grid-template-columns: 10% 80% 10%;
+  }
+  .CardTitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-bottom: 0;
+    gap: 1.5em;
+  }
+  .CardTitle h4 {
+    font-weight: 700;
+  }
+  .CardTitle h4:hover {
+    cursor: pointer;
+    color: #3cb4ac;
+  }
+  .CardTitle p {
+    color: #3cb4ac;
+    font-weight: 700;
+  }
+  .stock {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    font-size: 1.2em;
+  }
+  .description {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/4;
+  }
   .info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .input {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .input input {
+    max-width: 75px;
   }
 }
 /*# sourceMappingURL=SelectionModal.module.css.map */

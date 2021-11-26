@@ -165,6 +165,9 @@
 }
 
 @media screen and (min-width: $bp-medium) {
+    .modal {
+        top: 100%;
+    }
     .CTA {
         display: block;
         margin-bottom: 3em;
@@ -179,7 +182,48 @@
         }
     }
 
+    .Card {
+        grid-template-columns: 10% 80% 10%;
+    }
+
+    .CardTitle {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        margin-bottom: 0;
+        gap: 1.5em;
+        h4 {
+            font-weight: $weight-bold;
+            &:hover {
+                cursor: pointer;
+                color: $moderate-cyan;
+            }
+        }
+        p {
+            color: $moderate-cyan;
+            font-weight: $weight-bold;
+        }
+    }
+
+    .stock {
+        grid-row: 1/2;
+        grid-column: 3/4;
+        font-size: 1.2em;
+    }
+
+    .description {
+        grid-column: 2/4;
+    }
     .info {
         display: flex;
+    }
+
+    .input {
+        grid-column: 1/4;
+        display: flex;
+        align-items: center;
+        input {
+            max-width: 75px;
+        }
     }
 }

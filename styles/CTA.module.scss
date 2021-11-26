@@ -48,7 +48,6 @@
     }
     p {
         display: none;
-        font-weight: $weight-bold;
     }
 }
 .active {
@@ -71,5 +70,9 @@
     .bookmark {
         background: $light-gray;
         padding-right: 2em;
+        p {
+            display: initial;
+            font-weight: $weight-bold;
+        }
     }
 }

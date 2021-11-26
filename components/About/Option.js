@@ -2,8 +2,8 @@ import React from 'react';
 import Link from '../util/Link';
 import styles from '../../styles/About.module.css';
 import { useAppContext } from '../../util/ModalContext';
-const Option = ({ title, amount, description, stock, disable = false }) => {
-    let { state, setSelection } = useAppContext();
+const Option = ({ title, amount, description, stock, disable = false, id }) => {
+    let { state, handleChange } = useAppContext();
     let { selection } = state;
     return (
         <div className={`${styles.Card} ${disable ? styles.disable : ''}`}>
@@ -18,7 +18,16 @@ const Option = ({ title, amount, description, stock, disable = false }) => {
                 <Link
                     text={disable ? 'Out of Stock' : 'Select Reward'}
                     disable={disable}
-                    onClick={() => setSelection(!selection)}
+                    onClick={() => {
+                        handleChange({
+                            ...state,
+                            selection: !selection,
+                            selected: parseInt(id.slice(-1)),
+                        });
+                        document
+                            .getElementById('selectionModal')
+                            .scrollIntoView();
+                    }}
                 />
             </span>
         </div>

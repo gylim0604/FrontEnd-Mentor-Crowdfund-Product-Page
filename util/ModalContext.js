@@ -6,6 +6,7 @@ export function ContextWrapper({ children }) {
     let initialState = {
         selection: false,
         completion: false,
+        selected: 0,
     };
     const [state, setState] = useState(initialState);
 
